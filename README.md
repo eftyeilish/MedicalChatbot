@@ -23,10 +23,28 @@ This project allows users to ask medical questions, and the chatbot answers
 ## 🏗️ Project Structure
 
 
-#clone the repository
 
-git clonehttps://github.com/eftyeilish/MedicalChatbot.git
-#create virtual enviroment
-conda create -n medibot python = 3.10 -y
+---
 
+## ⚙️ Setup Instructions
+
+### 1️⃣ Clone the Repository
+```bash
+git clone https://github.com/<your-username>/MedicalChatbot.git
+cd MedicalChatbot
+
+#Create Python Environment
+conda create -n medicalbot python=3.10 -y
+conda activate medicalbot
 pip install -r requirement.txt
+
+#Install Ollama (Local LLM)
+ollama pull llama3
+
+
+#Add Environment Variables
+PINECONE_API_KEY=your_pinecone_api_key_here
+
+#Run the Application
+python app.py
+
